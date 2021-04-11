@@ -1,11 +1,14 @@
 @extends('layout')
 <head>
 	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<!-- BOOTSTRAP -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"> </script>
 <!--Get your own code at fontawesome.com-->
  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
-      
-      <script>
+</head>
+<script>
          function getMessage() {
             $.ajax({
                type:'POST',
@@ -17,19 +20,18 @@
             });
          }
       </script>
-</head>
 <style type="text/css">
 	body{
 			margin: 0;
 			background-color: white;
 		}
 		.ba1{
-			background-image: url(https://24smi.org/public/media/news/2017/09/07/yFW6T37u9gJ1_uchenye-nashli-sviaz-mezhdu-smertnostiu-i-dnem-pop.jpg);
+			background-image: url(https://vk.com/dbazarkulova?z=photo236457035_457248829%2Falbum236457035_00%2Frev);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			height: 550px;
-			background-position-y: -200px;
+			
 		}
 		.ba1 >h1{
 			margin: 0;

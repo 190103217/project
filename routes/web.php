@@ -25,3 +25,10 @@ Route::get('mail/send', 'MailController@send');
 
 Route::get('/form', 'UploadController@uploadForm');
 Route::post('/form', 'UploadController@uploadSubmit');
+
+Route::get('chart', function () {
+    return view('chart');
+});
+
+
+ 
