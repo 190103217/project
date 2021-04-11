@@ -1,8 +1,7 @@
 @extends('layout')
 <head>
     <!-- BOOTSTRAP -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"> </script>
+
 </head>
 
 @section('content')

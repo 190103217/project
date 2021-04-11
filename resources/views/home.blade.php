@@ -1,11 +1,10 @@
 @extends('layout')
 <head>
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<script src="http://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 	<!-- BOOTSTRAP -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"> </script>
+	
 <!--Get your own code at fontawesome.com-->
- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+ <script src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
 </head>
 <script>

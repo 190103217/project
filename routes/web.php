@@ -1,4 +1,6 @@
 <?php
+use App\Result;
+use Illuminate\Support\Facades\Input;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +33,15 @@ Route::get('chart', function () {
 });
 
 
- 
+ Route::get ( '/searc', function () {
+    return view ( 'search' );
+} );
+Route::any ( '/search', function () {
+    $q = Input::get ( 'q' );
+    $s = Input::get ( 's' );
+    $user = Result::where ( 'patient_id', '=',$s)->where ( 'password', 'LIKE', '%' . $q . '%' )->get ();
+    if (count ( $user ) > 0)
+        return view ( 'search' )->withDetails ( $user )->withQuery ( $s );
+    else
+        return view ( 'search' )->withMessage ( 'No Details found. Try to search again !' );
+} );
