@@ -6,7 +6,8 @@
 
     <!-- CSRF Token -->
     
-
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -16,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{  URL::asset('css/app.css') }}" rel="stylesheet">
+    
     
 </head>
 <body>
