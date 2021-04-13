@@ -1,10 +1,10 @@
 @extends('layout')
 <head>
-	<script src="http://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 	<!-- BOOTSTRAP -->
 	
 <!--Get your own code at fontawesome.com-->
- <script src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+ <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
 </head>
 <script>
