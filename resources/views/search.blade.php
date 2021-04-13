@@ -1,4 +1,4 @@
-@extends('layout')
+
 
 <head>
 <title>Search functionality - justLaravel.com</title>
@@ -7,7 +7,7 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
-@section('content')
+
 <body>
 	<div class="container">
 		<form action="http://localhost:8888/project/public/search" method="POST" role="search">
@@ -56,4 +56,3 @@
 			@endif
 		</div>
 
-@endsection
