@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ secure_asset('css/AdminLTE.min.css') }}" rel="stylesheet">
+    <link href="{{  URL::asset('css/app.css') }}" rel="stylesheet">
     
 </head>
 <body>
