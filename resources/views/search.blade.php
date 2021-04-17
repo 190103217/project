@@ -1,19 +1,18 @@
-
+@extends('layout')
 
 <head>
 <title>Search functionality - justLaravel.com</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-</head>
 
+</head>
+@section('content')
 <body>
 	<div class="container">
-		<form action="http://localhost:8888/project/public/search" method="POST" role="search">
+		<form action="search" method="POST" role="search">
 			{{ csrf_field() }}
-			<div class="input-group">
-				<input style="" type="text" class="form-control" name="s"
+			<div >
+				<input style="margin-top: 30px;" type="text" class="form-control" name="s"
 					placeholder="Enter your id">
 				<input style="margin-top: 30px;" type="text" class="form-control" name="q"
 					placeholder="Enter your password"> 
@@ -55,4 +54,4 @@
 			<p>{{ $message }}</p>
 			@endif
 		</div>
-
+@endsection

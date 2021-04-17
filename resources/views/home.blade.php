@@ -1,116 +1,141 @@
 @extends('layout')
-<head>
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-	<!-- BOOTSTRAP -->
-	
-<!--Get your own code at fontawesome.com-->
- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-      </script>
-</head>
-<script>
-         function getMessage() {
-            $.ajax({
-               type:'POST',
-               url:'getmsg',
-               data:'_token = <?php echo csrf_token() ?>',
-               success:function(data) {
-                  $("#msg").html(data.msg);
-               }
-            });
-         }
-      </script>
-<style type="text/css">
-	body{
-			margin: 0;
-			background-color: white;
-		}
-		.ba1{
-			background-image: url(https://vk.com/dbazarkulova?z=photo236457035_457248829%2Falbum236457035_00%2Frev);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			height: 550px;
-			
-		}
-		.ba1 >h1{
-			margin: 0;
-			padding-top: 230px;
+<style>
+        body{
+            margin: 0;
+            background-color: #ffffff;
         }
-        .header1{
-        	margin: 0;
-			display: flex;
-			text-align: center;
-			justify-content: space-around;
-			text-transform: uppercase;
-			font-size: 35px;
-			color: #87CEEB;
-			cursor:pointer;
-			background-color: white;
-			padding: 30px;
-		}
-		.m1{
-			display: flex;
-			padding: 100px;
-			background-color: #87CEEB;
-		}
-			#img{
-				height: 350px;
-				width: 100%;
-			}
-			#inone{
-				margin-top: 25px;
-				width: 200px;
-				height: 200px;
-				padding-bottom: 30px;
-			}
-			.btnBack{
-				border-radius: 40px; 
-				padding: 3px 29px; 
-				background-color: white; 
-				border:1px solid white; 
-				font-size:25px;
-				margin-top: 40px; 
-				margin-left: 50px; 
-				color: #87CEEB;
-			}
-
+        button{
+            font-family: 'Cuprum', sans-serif;
+        }
+        .header{
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            font-size: 18px;
+            font-family: 'Ubuntu', sans-serif;
+            text-indent: 30px;
+            padding-right: 150px;
+            cursor:pointer;
+            
+        }
+        .ba1{
+            background-image: url(images/back.JPEG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            height: 750px;
+        }
+        .ba1 >h1{
+            margin: 0;
+            padding-top: 230px;
+        }
+        .w1{
+            border:1px solid white;
+            width: 400px;
+            padding: 20px 0 20px 0;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+         .box{
+             display: flex;
+             justify-content: space-around;
+             flex-wrap: wrap;
+         }
+         .box-it{
+            background-attachment: fixed;
+            margin-bottom:50px;
+            
+         }
+         .box-it button{
+             background-color: #820024;
+             border-radius: 20px;
+             padding: 3px 29px;
+             color: white;
+             ;
+         }
+         .p1{
+            padding-top: 20px;
+         }
+         #s1{
+            padding: 30px;
+         }
+         .b1{
+            margin-top: 180px;
+            margin-bottom: 100px;
+            background-color: #E6E6FA; 
+            width: 1200px;
+            height: 400px;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+        .g1{
+            padding-left: 700px;
+            padding-top: 80px;
+            padding-right: 80px;
+            
+        }
+        #img4{
+            position: absolute;
+            margin-top: -390px;
+            margin-left: 80px;
+            width: 450px;
+            height: 650px;
+        }
+        .m2{
+            background-image: url(https://www.kickative.com/wp-content/uploads/2020/04/networking_illustration.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 550px;
+            background-position-y: -400px;
+        }
+    <title>First task</title>
 </style>
+
 @section('content')
-<div class="ba1">
-		<h1 style="color: #4682B4; padding-left: 40px; font-family: 'Ubuntu', sans-serif;">{{ trans('sentence.Our teams lead the way to better medicine.')}}</h1>
-		<p style="color: #4682B4;padding-top: 20px; padding-left: 40px; font-family: 'Ubuntu', sans-serif;">{{ trans('sentence.See how Northwestern Medicines physicians collaborate to solve the toughest cases.')}}</p>
-		<button style="border-radius: 20px; padding: 3px 29px; background-color: white; border:1px solid white; font-size:25px;margin-top: 40px; margin-left: 50px; color: #87CEEB;">{{ trans('sentence.Learn now')}}</button>
-	</div>
-	<div class="header1">
-	    
-		<div onclick="change(this)" onmouseover="big1(this)" onmouseout="sml1(this)">
-			<i style="color:#87CEEB;" class="fas fa-user-md"></i> 
-		<h4 style="padding-top: 15px;">{{ trans('sentence.Find results')}}</h4>
-	</div>
-		<div onclick="change(this)" onmouseover="big1(this)" onmouseout="sml1(this)">
-		 <i style="color:#87CEEB;" class="fas fa-capsules"></i>
-		<h4 style="padding-top: 15px;">{{ trans('sentence.pharmacy')}}</h4>
-	</div>
-		<div onclick="change(this)" onmouseover="big1(this)" onmouseout="sml1(this)">
-			<i style="color:#87CEEB;" class="fas fa-map-marker-alt"></i>
-		<h4 style="padding-top: 15px;">{{ trans('sentence.Our location')}}</h4>
-	</div>
-</div>
-<div class="m1">
-	<div style="padding-right: 150px;">
-		<h2 id="h22" style="padding-bottom: 30px;color: #B22222;">{{ trans('sentence.COVID-19 Resource Center')}}</h2>
-		<div id = 'msg' style="font-size: 17px; color: #B22222;">{{ trans('sentence.Now more than ever, better medicine matters. Get the latest information on how COVID-19 may affect you, including vaccination, testing, symptoms, treatment, safety and current visitor policies.')}}</div>
-		<img id="inone" src="https://pngimg.com/uploads/attention/attention_PNG16.png">
-		<?php
-         echo Form::button('new information', ['onClick'=>'getMessage()', 'style' => 'border-radius: 20px; padding: 3px 29px; background-color: white; border:1px solid #DAA520; font-size:20px;margin-top: 20px;text-transform: uppercase; color: #DAA520']);
-      ?>
-	</div>
-	<img id="img" src="https://img.pravda.com/images/doc/a/f/afe77c7-b09600d-covid-19-21.jpg">
-</div>
-<div class="blog">
-	<div class="blog1">
-		
-	</div>
-	<div class="blog2"></div>
-</div>
+<body>
+    <div class="ba1">
+        <h1 style="color: black; padding-left: 40px; font-family: 'Ubuntu', sans-serif;">Best health care service!</h1>
+        <button style="border-radius: 20px; color: white; padding: 3px 29px; background-color: #6699ff; border:1px solid white; font-size:25px;margin-top: 40px; margin-left: 50px; ">Learn more</button>
+    </div>
+    <div id="s1">
+        
+        <h3 style="padding-left: 100px; margin-top: 110px; font-family: 'Ubuntu', sans-serif;">Services</h3>
+        
+    </div>
+      
+        <div class="box">
+     
+        <div class="box-it">
+            <img src="https://preview.pixlr.com/images/800wm/1077/1/1077100334.jpg" alt="photo" style="width: 230px; height: 200px; border-radius: 10%;cursor:pointer;" onclick="change3()">
+            <b><p class="p1" style="font-size: 18px;text-align: center;">Appintment</p></b>           
+        </div>
+
+        <div class="box-it">
+            <img src="https://media.istockphoto.com/vectors/woman-is-consulting-with-a-doctor-in-the-office-vector-id1248555232?k=6&m=1248555232&s=612x612&w=0&h=We1Sjm1AqIz7FX2l7TsYg2MRrs3WX2VOOxACBJOFpvc=" alt="photo" style="width: 230px; height: 200px; border-radius: 10%;cursor:pointer;" onclick="change4()">
+            <b><p class="p1" style="font-size: 18px;text-align: center;">Results</p></b>
+        </div>
+
+        <div class="box-it">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/hospital-and-medical-assistants-and-ambulance-2681143-2233471.png" alt="photo" style="width: 230px; height: 200px; border-radius: 10%;cursor:pointer;"onclick="change2()">
+            <b><p class="p1" style="font-size: 18px;text-align: center;">Location</p></b>       
+        </div>
+    </div>
+    <div class = "b1">
+    <div class="g1">
+    <div>   
+    <h1 style="font-family: 'Luckiest Guy', cursive; color: #9400D3;">Health care</h1>
+    <p style="color: #DDA0DD;">Health care, health-care, or healthcare is the maintenance or improvement of health via the prevention, diagnosis, treatment, recovery, or cure of disease, illness, injury, and other physical and mental impairments in people. Health care is delivered by health professionals and allied health fields.</p>
+   </div>
+   </div>
+   <img id="img4" src="images/clip-1075.png">
+    </div>
+
+    <div class="m2">
+        <h1 style="text-align: center;font-family: 'Ubuntu', sans-serif; color: #E9967A; text-transform: uppercase; padding-top: 12px; ">create your own group</h1>
+    </div>
+</body>
 @endsection

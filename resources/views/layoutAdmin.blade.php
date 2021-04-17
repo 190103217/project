@@ -27,8 +27,8 @@
     }
 </style>
 <body>
-<div id="app">
-    <div style="background-color: #6699ff;">
+    <div id="app">
+        <div style="background-color: #6699ff;">
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <a class="navbar-brand" href="hom"><img style="width: 200px; height: 40px;" src="https://www.nm.org/content/northwestern/img/northwestern-medicine-logo-white.png?v=20160601"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +39,10 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active" style="font-family: 'Ubuntu', sans-serif; ">
-        <a class="nav-link" href="chart">{{ trans('sentence.About Us')}} <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="crud">{{ trans('sentence.Manage Rusults')}} <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="searc">{{ trans('sentence.For Patients')}} </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">{{ trans('sentence.Contuct Us')}}</a>
+        <a class="nav-link" href="products">{{ trans('sentence.Manage Rusults')}} </a>
       </li>
                     @php $locale = session()->get('locale'); @endphp
                     <li class="nav-item dropdown">
@@ -71,7 +68,15 @@
                     </li>
                 </ul>
             </div>
-            <ul class="navbar-nav ml-auto">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -102,11 +107,15 @@
                             </li>
                         @endguest
                     </ul>
+                </div>
+            </div>
         </nav>
+</ul>
+</div>
+        <main class="py-4">
+            @yield('content')
+        </main>
     </div>
-    <main >
-        @yield('content')
-    </main>
-</div>  
+
 </body>
 </html>

@@ -17,13 +17,16 @@ Route::get('/', function () {
 });
 Route::get('lang/{locale}', 'LocalizationController@index');
 
-Route::get('/home', function () {
+Route::get('/hom', function () {
     return view('home');
 });
 
-Route::post('/getmsg','AjaxController@index');
+Route::resource('admin/crud','CrudsController');
+Route::resource('admin/products','ProductController');
+Auth::routes();
 
-Route::get('mail/send', 'MailController@send');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
 
 Route::get('/form', 'UploadController@uploadForm');
 Route::post('/form', 'UploadController@uploadSubmit');
@@ -45,3 +48,8 @@ Route::any ( '/search', function () {
     else
         return view ( 'search' )->withMessage ( 'No Details found. Try to search again !' );
 } );
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+

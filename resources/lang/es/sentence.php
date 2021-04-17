@@ -4,7 +4,7 @@
 
 return [
   'About Us' => 'Acerca De Nosotros',
-  'Service' => 'Servicio',
+  'For Patients' => 'For Patients',
   'Contuct Us' => 'Contáctenos',
   'Our teams lead the way to better medicine.' => 'Nuestros equipos lideran el camino hacia una mejor medicina.',
   'See how Northwestern Medicines physicians collaborate to solve the toughest cases.' => 'Vea cómo los médicos de Northwestern Medicines colaboran para resolver los casos más difíciles.',
