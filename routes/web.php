@@ -23,6 +23,7 @@ Route::get('/hom', function () {
 
 Route::resource('admin/crud','CrudsController');
 Route::resource('admin/products','ProductController');
+Route::resource('products','ProductController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
