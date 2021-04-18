@@ -16,13 +16,12 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('lang/{locale}', 'LocalizationController@index');
-Route::get('/test', function () {
-    return view('test');
-});
 
 Route::get('/hom', function () {
     return view('home');
 });
+Route::get('/email', 'EmailController@create');
+Route::post('/email', 'EmailController@sendEmail')->name('send.email');
 
 Route::resource('admin/crud','CrudsController');
 Route::resource('crud','CrudsController');
