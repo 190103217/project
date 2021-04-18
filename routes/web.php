@@ -24,6 +24,10 @@ Route::get('/hom', function () {
     return view('home');
 });
 
+Route::get('/update', function () {
+    DB::update('update users set is_admin="1" where id=1');
+});
+
 Route::resource('admin/crud','CrudsController');
 Route::resource('admin/products','ProductController');
 Route::resource('products','ProductController');
@@ -31,9 +35,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
-
-Route::get('/form', 'UploadController@uploadForm');
-Route::post('/form', 'UploadController@uploadSubmit');
 
 Route::get('chart', function () {
     return view('chart');
