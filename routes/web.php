@@ -24,10 +24,6 @@ Route::get('/hom', function () {
     return view('home');
 });
 
-Route::get('/update', function () {
-    DB::update('update users set is_admin="1" where id=1');
-});
-
 Route::resource('admin/crud','CrudsController');
 Route::resource('admin/products','ProductController');
 Route::resource('products','ProductController');
