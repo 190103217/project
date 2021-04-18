@@ -22,9 +22,9 @@
 </head>
 <body>
     <div id="app">
-        <div style="background-color: #6699ff;">
+        <div style="background-color: #63599e;">
         <nav class="navbar navbar-expand-lg navbar-dark ">
-            <a class="navbar-brand" href="hom"><img style="width: 200px; height: 40px;" src="https://www.nm.org/content/northwestern/img/northwestern-medicine-logo-white.png?v=20160601"></a>
+            <a class="navbar-brand" href="crud"><img style="width: 200px; height: 40px;" src="https://www.nm.org/content/northwestern/img/northwestern-medicine-logo-white.png?v=20160601"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -74,11 +74,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ trans('sentence.Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ trans('sentence.Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -91,7 +91,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ trans('sentence.Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

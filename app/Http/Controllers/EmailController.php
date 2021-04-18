@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mail;
+use App\Appointment;
 
 class EmailController extends Controller
 {
@@ -15,12 +16,15 @@ class EmailController extends Controller
     public function sendEmail(Request $request)
     {
         $request->validate([
+          'name' => 'required',
+          'surname' => 'required',
           'email' => 'required|email',
           'reason' => 'required',
-          'surname' => 'required',
-          'name' => 'required',
+          'doctor' => 'required',
+          'date' => 'required',
           'content' => 'required',
         ]);
+        Appointment::create($request->all());
 
         $data = [
           'reason' => $request->reason,

@@ -1,5 +1,7 @@
 <?php
 use App\Result;
+use App\User;
+use App\Appointment;
 use Illuminate\Support\Facades\Input;
 
 /*
@@ -13,9 +15,16 @@ use Illuminate\Support\Facades\Input;
 |
 */
 Route::get('/', function () {
-    return view('home');
+    return view('auth.login');
+});
+Route::get('/location', function () {
+    return view('location');
 });
 Route::get('lang/{locale}', 'LocalizationController@index');
+Route::get('password/lang/{locale}', 'LocalizationController@index');
+Route::get('admin/lang/{locale}', 'LocalizationController@index');
+Route::get('products/lang/{locale}', 'LocalizationController@index');
+Route::get('crud/lang/{locale}', 'LocalizationController@index');
 
 Route::get('/hom', function () {
     return view('home');
@@ -52,5 +61,7 @@ Route::any ( '/search', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 
 

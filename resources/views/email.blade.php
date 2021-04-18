@@ -6,7 +6,7 @@ body {
     font-family: "Roboto", sans-serif;
 }
 .contact-form {
-    padding: 50px;
+    padding: 110px 20px;
     margin: 30px auto;
 }	
 .contact-form h1 {
@@ -55,11 +55,15 @@ body {
 </head>
 @section('content')
 <body>
-<div class="container-lg">
+<div style="display: flex;">
+    <div style="width: 40%; background-color: #d3e0ea; padding: 160px 40px; ">
+        <h1 style="font-family: 'Luckiest Guy', cursive; color:#2978b5;">{{ trans('sentence.Make your appointment')}}</h1>
+        <img src="images/clip-1426.png" style="width:450px; height: 400px;">
+    </div>
+<div class="container-lg" style="width: 60%;">
 	<div class="row">
 		<div class="col-md-8 mx-auto">
 			<div class="contact-form">
-				<h1>Make your appointment</h1>
                 @if(session()->has('message'))
                     <div class="alert alert-success">
                         {{ session()->get('message') }}
@@ -70,39 +74,39 @@ body {
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-								<label for="inputName">Name</label>
-								<input type="text" name="name" class="form-control" placeholder="Enter Name">
+								<label for="inputName">{{ trans('sentence.Name')}}</label>
+								<input type="text" name="name" class="form-control" placeholder="{{ trans('sentence.Enter Name')}}">
                                 @error('name')
                                 <span class="text-danger"> {{ $message }} </span>
                                 @enderror
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="form-group">
-								<label for="inputEmail">Surname</label>
-								<input type="text" name="surname" class="form-control" placeholder="Enter Surname">
+                            <div class="form-group">
+                                <label for="inputName">{{ trans('sentence.Surname')}}</label>
+                                <input type="text" name="surname" class="form-control" placeholder="{{ trans('sentence.Enter Surname')}}">
                                 @error('surname')
                                 <span class="text-danger"> {{ $message }} </span>
                                 @enderror
-							</div>
-						</div>
+                            </div>
+                        </div>
 					</div>   
 					<div class="form-group">
-						<label for="inputSubject">Email</label>
-                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
+						<label for="inputSubject">{{ trans('sentence.Email')}}</label>
+                        <input type="email" name="email" class="form-control" placeholder="{{ trans('sentence.Enter Email')}}">
                         @error('email')
                         <span class="text-danger"> {{ $message }} </span>
                         @enderror
 					</div>         
 					<div class="form-group">
-						<label for="inputSubject">Reason</label>
-                        <input type="text" name="reason" class="form-control" placeholder="Enter Your Reason">
+						<label for="inputSubject">{{ trans('sentence.Reason')}}</label>
+                        <input type="text" name="reason" class="form-control" placeholder="{{ trans('sentence.Enter Your Reason')}}">
                         @error('reason')
                         <span class="text-danger"> {{ $message }} </span>
                         @enderror
 					</div>
 					<div class="form-group">
-						<label for="inputSubject">Doctor</label>
+						<label for="inputSubject">{{ trans('sentence.Doctor')}}</label>
                         <div>
                           <input type="radio" id="huey" name="doctor" value="huey"
                                  checked>
@@ -123,26 +127,27 @@ body {
                         @enderror
 					</div>
 					<div class="form-group">
-						<label for="inputSubject">Date</label>
+						<label for="inputSubject">{{ trans('sentence.Date')}}</label>
                         <input type="datetime-local" name="date" class="form-control">
                         @error('date')
                         <span class="text-danger"> {{ $message }} </span>
                         @enderror
 					</div>
 					<div class="form-group">
-						<label for="inputMessage">Message</label>
-                        <textarea name="content" rows="5" class="form-control" placeholder="Enter Your Message"></textarea>
+						<label for="inputMessage">{{ trans('sentence.Message')}}</label>
+                        <textarea name="content" rows="5" class="form-control" placeholder="{{ trans('sentence.Enter Your Message')}}"></textarea>
                         @error('content')
                         <span class="text-danger"> {{ $message }} </span>
                         @enderror
 					</div>
 					<div class="text-center">
-						<button type="submit" class="btn " style="background-color: #6699ff;">Send</button>
+						<button type="submit" class="btn " style="background-color: #6699ff;">{{ trans('sentence.Send')}}</button>
 					</div>            
 				</form>
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 </body>
 @endsection
