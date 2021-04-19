@@ -82,5 +82,7 @@ return [
   'Enter Last Name' => 'Enter Last Name',
   'Select Profile Image' => 'Select Profile Image',
   'Add' => 'Add',
+  'Largest Biomedical Academic Research' => 'Largest Biomedical Academic Research',
+  'Northwestern is the fastest-growing research enterprise among all U.S. medical schools – climbing from 39th to 15th in National Institutes of Health funding since 2002. The new center provides much-needed biomedical research space to continue Northwestern’s projected growth.' => 'Northwestern is the fastest-growing research enterprise among all U.S. medical schools – climbing from 39th to 15th in National Institutes of Health funding since 2002. The new center provides much-needed biomedical research space to continue Northwestern’s projected growth.',
   
 ];

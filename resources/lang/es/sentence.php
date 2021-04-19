@@ -76,9 +76,10 @@ return [
   'First Name' => 'Nombre',
   'Last Name' => 'Apellido',
   'Action' => 'Acto',
-
   'Enter First Name' => 'Introduzca Su Nombre',
   'Enter Last Name' => 'Introduzca su Apellido',
   'Select Profile Image' => 'Seleccionar Imagen de Perfil',
   'Add' => 'Añadir',
+  'Largest Biomedical Academic Research' => 'La Mayor Investigación Académica Biomédica',
+  'Northwestern is the fastest-growing research enterprise among all U.S. medical schools – climbing from 39th to 15th in National Institutes of Health funding since 2002. The new center provides much-needed biomedical research space to continue Northwestern’s projected growth.' => 'Northwestern es la empresa de investigación de más rápido crecimiento entre todas las escuelas de medicina de los Estados Unidos, subiendo del 39 al 15 en el financiamiento de los Institutos Nacionales de Salud desde 2002.',
 ];

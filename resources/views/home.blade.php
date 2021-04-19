@@ -90,6 +90,29 @@
             width: 450px;
             height: 650px;
         }
+        .k1{
+            margin-top: 180px;
+            margin-bottom: 200px;
+            background-color: #cbf1f5; 
+            width: 1200px;
+            height: 400px;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+        .n1{
+            padding-left: 700px;
+            padding-top: 80px;
+            padding-right: 80px;
+            
+        }
+        #img5{
+            position: absolute;
+            margin-top: -370px;
+            margin-left: 140px;
+            width: 350px;
+            height: 500px;
+        }
     <title>First task</title>
 </style>
 
@@ -150,7 +173,16 @@
         <h1 style="font-family: 'Luckiest Guy', cursive; color:#f9f3f3;">{{ trans('sentence.Good communication')}}</h1>
         <img src="images/clip-doctor-sent-me-a-message.png" style="width:400px; height: 350px; margin-top: 50px;">
     </div>
-    
 </div>
+
+<div class = "k1">
+    <div class="n1">
+    <div>   
+    <h1 style="font-family: 'Luckiest Guy', cursive; color: #5aa897;">{{ trans('sentence.Largest Biomedical Academic Research')}}</h1>
+    <p style="color: #8fd9a8;">{{ trans('sentence.Northwestern is the fastest-growing research enterprise among all U.S. medical schools – climbing from 39th to 15th in National Institutes of Health funding since 2002. The new center provides much-needed biomedical research space to continue Northwestern’s projected growth.')}}</p>
+   </div>
+   </div>
+   <img id="img5" src="images/clip-doctor-and-patient.png">
+    </div>
 </body>
 @endsection
